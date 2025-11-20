@@ -56,6 +56,25 @@
         <canvas id="board" width="640" height="640" aria-label="Snake board"></canvas>
       </section>
 
+      <section class="touch-controls" aria-label="Sensorli boshqaruvlar">
+        <p class="touch-controls__hint">
+          Sensorli qurilmada o'ynash uchun quyidagi tugmalar yoki ekranda surish (swipe) dan foydalaning.
+        </p>
+        <div class="touch-controls__grid">
+          <div class="touch-controls__row">
+            <button class="touch-btn" data-dir="up">↑</button>
+          </div>
+          <div class="touch-controls__row touch-controls__row--middle">
+            <button class="touch-btn" data-dir="left">←</button>
+            <button class="touch-btn touch-btn--center" data-dir="pause">II</button>
+            <button class="touch-btn" data-dir="right">→</button>
+          </div>
+          <div class="touch-controls__row">
+            <button class="touch-btn" data-dir="down">↓</button>
+          </div>
+        </div>
+      </section>
+
       <section class="info-grid">
         <article class="info-card">
           <h3>Qanday o'ynash kerak?</h3>

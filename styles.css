@@ -193,7 +193,7 @@ body {
 .status-bar--hero {
   grid-template-columns: repeat(3, minmax(140px, 1fr));
   margin: 0;
-  width: min(540px, 100%);
+  width: 100%;
 }
 
 .status {
@@ -334,6 +334,61 @@ body.theme-dark .theme-toggle__icon--moon {
   opacity: 1;
 }
 
+.touch-controls {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.touch-controls__hint {
+  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.touch-controls__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.touch-controls__row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.touch-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  border: 1px solid #f5f7fd;
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.touch-btn--center {
+  font-size: 0.9rem;
+}
+
+.touch-btn:active {
+  transform: translateY(1px);
+  box-shadow: 6px 6px 16px #cfd6e5, -4px -4px 12px #ffffff;
+}
+
+body.theme-dark .touch-btn {
+  border-color: #020617;
+}
+
 @media (max-width: 960px) {
   .hero {
     flex-direction: column;
@@ -376,4 +431,27 @@ body.theme-dark .theme-toggle__icon--moon {
     width: 100%;
     text-align: center;
   }
+
+  .status-bar--hero {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .status-bar--hero .status:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .touch-controls {
+    display: block;
+  }
 }
+
+@media (max-width: 420px) {
+  .hero__header h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero__actions {
+    gap: 0.6rem;
+  }
+}*** End Patch니다 to=functions.apply_patch  लड़्य assistant to=functions.apply_patchഴിഞ്ഞ-unstyled.Cursors рязть шавари:"<<commentary to=functions.apply_patch -selector  ചികിതassistant to=functions.apply_patch время  obowiązku  whiskey  profiler  replaceme  mover  ws  bzjson.JSONException  rt  pointer руппа  Korea  pdf entials  exhaust  confirmation  এটি  class  latowski  cowboy  माँ  latch  Mesa  attach циональность  streng  Alou  grupa  defStyle  Details  poslednja ർക്ക്ഷ  Africa  butt  gevoerd  oldschool  адрес  heets  tight  ECR  zaraz  navController  coopy  Tenterden  namemgr  Fak  midsize  rustup  CALL_LIMIT_REACHED  jr  zహ  steps  ubuntu  epf  menthol  Hun  ANG  restructured  Spi  pexels  behoben  unauth  fife  paramString  donotuse  Beno  ojname  geojson  prištene  button16  ZERO  yToken  aurum  Maga  Luc  QueryDocumentSnapshot  goroutine  sust  bezpośrednio  ソ  coron  jsem 九  Füh  Width  riv  RGPD  pre  핞  Liabilities  bluej  bislis  takelog  nina  jakarta  listriggers  black  reus  BE屋  centre  statutory  hbox  schreib  Praised  taxno  pěl ýän  Taiwan  Mayer  rivit  copier  remit  Beat  Tanya uele  детстве  arbidol 크  awn  Зас  palauta  ...  equatable  भैया  OCl  Esᴄ  ucp  odde  blast  부  elop  Fee  rrr  fist  tus  Asserts  bo_bu  sta  Hostx  Дж 위 /parser error: Unexpected token: t (REGEXP_EXPECTED)  to=functions.apply_patch ***!

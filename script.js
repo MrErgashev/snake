@@ -234,6 +234,75 @@ if (themeToggle) {
   });
 }
 
+function setDirectionFromInput(dir) {
+  const { x, y } = state.direction;
+  if (dir === "up" && y !== 1) state.nextDirection = { x: 0, y: -1 };
+  if (dir === "down" && y !== -1) state.nextDirection = { x: 0, y: 1 };
+  if (dir === "left" && x !== 1) state.nextDirection = { x: -1, y: 0 };
+  if (dir === "right" && x !== -1) state.nextDirection = { x: 1, y: 0 };
+}
+
+// Touch buttons (mobile on-screen controls)
+const touchButtons = document.querySelectorAll(".touch-btn");
+
+touchButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const dir = btn.dataset.dir;
+    if (dir === "pause") {
+      togglePause();
+      return;
+    }
+    setDirectionFromInput(dir);
+  });
+});
+
+// Swipe controls on canvas (for touch screens)
+let touchStartX = null;
+let touchStartY = null;
+
+function handleTouchStart(e) {
+  const touch = e.touches[0];
+  touchStartX = touch.clientX;
+  touchStartY = touch.clientY;
+}
+
+function handleTouchMove(e) {
+  // oldinga scroll bo‘lmasin
+  e.preventDefault();
+}
+
+function handleTouchEnd(e) {
+  if (touchStartX === null || touchStartY === null) return;
+
+  const touch = e.changedTouches[0];
+  const dx = touch.clientX - touchStartX;
+  const dy = touch.clientY - touchStartY;
+
+  const absDx = Math.abs(dx);
+  const absDy = Math.abs(dy);
+
+  const threshold = 20;
+  if (absDx < threshold && absDy < threshold) {
+    touchStartX = null;
+    touchStartY = null;
+    return;
+  }
+
+  if (absDx > absDy) {
+    setDirectionFromInput(dx > 0 ? "right" : "left");
+  } else {
+    setDirectionFromInput(dy > 0 ? "down" : "up");
+  }
+
+  touchStartX = null;
+  touchStartY = null;
+}
+
+canvas.addEventListener("touchstart", handleTouchStart, { passive: false });
+canvas.addEventListener("touchmove", handleTouchMove, { passive: false });
+canvas.addEventListener("touchend", handleTouchEnd, { passive: false });
+
 // Pre-draw grid for idle state
 drawGrid();
 
